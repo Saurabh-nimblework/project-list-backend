@@ -1,6 +1,11 @@
-package com.engineering.restapi.projectlistbackend.projectlist;
+package com.engineering.restapi.projectlistbackend.Entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "projectLists")
 public class ProjectList {
+    @Id
     private String id;
     private String name;
     private String owner;
